@@ -104,3 +104,10 @@ average_change = []
 greatest_increase_in_profits = []
 greatest_decrease_in_profits = []
 
+#for row in date_profit_loss:
+    #total_months.append(row[0])
+    #print(f'{date_profit_loss[0]}')
+
+
+total_months = len(date_profit_loss)
+print(f'Total Months:{total_months}')
