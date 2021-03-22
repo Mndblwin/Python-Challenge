@@ -4,6 +4,7 @@
 import csv
 import os
 
+
 #Files to load and output
 file_to_load = os.path.join("Resources","Budget_data.csv")
 file_to_output = os.path.join("Analysis","financial_analysis.csv")
@@ -103,7 +104,7 @@ total = []
 average_change = []
 greatest_increase_in_profits = []
 greatest_decrease_in_profits = []
-Revenue = []
+
 
 #for row in date_profit_loss:
     #total_months.append(row[0])
@@ -115,6 +116,8 @@ print(f'Total Months:{total_months}')
 
 total = sum(list(date_profit_loss.values()))
 print(f'Total:${total}')
+
+# greatest_increase_in_profits = max(date_profit_loss.values())
 
 
 #for row in date_profit_loss:
