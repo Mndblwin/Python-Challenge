@@ -3,6 +3,7 @@
 #Import the required packages
 import csv
 import os
+import statistics
 
 
 #Files to load and output
@@ -116,6 +117,13 @@ print(f'Total Months:{total_months}')
 
 total = sum(list(date_profit_loss.values()))
 print(f'Total:${total}')
+
+average_change = sum(list(date_profit_loss.values()))/86
+print(f'Average Change:${average_change}')
+
+
+
+
 
 # greatest_increase_in_profits = max(date_profit_loss.values())
 
