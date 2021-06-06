@@ -107,10 +107,6 @@ greatest_increase_in_profits = []
 greatest_decrease_in_profits = []
 
 
-#for row in date_profit_loss:
-    #total_months.append(row[0])
-    #print(f'{date_profit_loss[0]}')
-
 
 total_months = len(date_profit_loss)
 print(f'Total Months:{total_months}')
@@ -121,53 +117,18 @@ print(f'Total:${total}')
 average_change = sum(list(date_profit_loss.values()))/86
 print(f'Average Change:${average_change}')
 
-#for row in date_profit_loss:
-    #average_change +=int(str(date_profit_loss))
-    #print(average_change)
-
-
 
 greatest_increase_in_profits = max(date_profit_loss.values())
 print(f'Greatest_increase_in_profits:${greatest_increase_in_profits}')
 
-#for row in date_profit_loss:
-    #total.append(row[1])
-    #print(total)
 
-#for h in total:
-    #Revenue += int(h)
-    #print(Revenue)
+budget_file = os.path.join("Output", "budget_data.txt")
+with open(budget_file, "w") as outfile:
 
-#for row in date_profit_loss:
-    #total_months.append(row[0])
-    #print(f'{date_profit_loss[0]}')
-
- current_month_profit_loss = int(row[1])
-        net_profit_loss += current_month_profit_loss
-
-        if (count_months == 1):
-            # Make the value of previous month to be equal to current month
-            previous_month_profit_loss = current_month_profit_loss
-            continue
-
-        else:
-
-            # Compute change in profit loss 
-            profit_loss_change = current_month_profit_loss - previous_month_profit_loss
-
-            # Append each month to the months[]
-            months.append(row[0])
-
-            # Append each profit_loss_change to the profit_loss_changes[]
-            profit_loss_changes.append(profit_loss_change)
-
-            # Make the current_month_loss to be previous_month_profit_loss for the next loop
-            previous_month_profit_loss = current_month_profit_loss
-
-    #sum and average of the changes in "Profit/Losses" over the entire period
-    sum_profit_loss = sum(profit_loss_changes)
-    average_profit_loss = round(sum_profit_loss/(count_months - 1), 2)
-
-    # highest and lowest changes in "Profit/Losses" over the entire period
-    highest_change = max(profit_loss_changes)
-    lowest_change = min(profit_loss_changes)
+    outfile.write("Financial Analysis\n")
+    outfile.write("----------------------------\n")
+    outfile.write(f"Total Months:  {total_months}\n")
+    outfile.write(f"Total:  ${total}\n")
+    outfile.write(f"Average Change:  ${average_change}\n")
+    outfile.write(f"Greatest Increase in Profits: (${greatest_increase_in_profits})\n")
+    outfile.write(f"Greatest Decrease in Losses:  (${greatest_decrease_in_profits})\n")
