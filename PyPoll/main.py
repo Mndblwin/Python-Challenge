@@ -47,6 +47,9 @@ candidate_OTooley = candidate.count("O'Tooley")
 percent_OTooley = candidate.count("O'Tooley") / len(voter_id) * 100
 print(f"OTooley: {percent_OTooley} {candidate_OTooley}")
     
+def winner (candidate):
+    return max(set(candidate), key = candidate.count)
+print(winner(candidate))
 
 
 
