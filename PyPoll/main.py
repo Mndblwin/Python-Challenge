@@ -71,3 +71,5 @@ with open(outfile, 'w') as textfile:
                 f"Li: {round_Li} {candidate_Li}\n"
                 f"OTooley: {round_OTooley} {candidate_OTooley}\n"
                 f"--------------------------------\n")
+    textfile.write(f'Winner:' + str(winner(candidate)))
+                
