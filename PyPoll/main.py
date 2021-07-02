@@ -6,8 +6,9 @@ import csv
 import statistics
 from typing import Counter
 
- # Set path for file
+ # Set input/output path for file
 csvpath = os.path.join("PyPoll", "election_data.csv")
+outfile = os.path.join("PyPoll", "Analysis", "PyPoll_analysis.txt")
 
 # Open the CSV
 csvfile =  open(csvpath)
@@ -54,4 +55,9 @@ def winner (candidate):
     return max(set(candidate), key = candidate.count)
 print(f'Winner:' + str(winner(candidate)))
 
-
+# create output file 
+with open(outfile, 'w') as textfile:
+    textfile.write(f"Election Results\n"
+                f"--------------------------------\n"
+                f"Total Votes: {len(voter_id)}\n"
+                f"--------------------------------\n")
