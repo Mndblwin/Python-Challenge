@@ -23,10 +23,14 @@ header = next(csvreader)
 
 for row in csvreader:
     voter_id.append(row[0])
+    county.append(row[1])
+    candidate.append(row[2])
 #print(len('Total Votes: '+ str(voter_id)))
 # vote_counts = [int(i) for i in voter_id if i != "NA"]
 #vote_counts.count(voter_id)
 print(f"Total Votes: {len(voter_id)}")
+
+
     
 
 
