@@ -32,16 +32,20 @@ print(f"Total Votes: {len(voter_id)}")
 #print(f"Khan: {sum(candidate.count(['Khan']))}")
 #print(candidate.count('Khan'))
 candidate_Khan = candidate.count('Khan')
-print(f'Khan: '+ str(candidate_Khan))
+percent_Khan = candidate.count('Khan') / len(voter_id) * 100
+print(f"Khan: {percent_Khan} {candidate_Khan}")
 
 candidate_Correy = candidate.count('Correy')
-print(f'Correy: '+ str(candidate_Correy))
+percent_Correy = candidate.count('Correy') / len(voter_id) * 100
+print(f"Correy: {percent_Correy} {candidate_Correy}")
 
 candidate_Li = candidate.count('Li')
-print(f'Li: '+ str(candidate_Li))
+percent_Li = candidate.count('Li') / len(voter_id) * 100
+print(f"Li: {percent_Li} {candidate_Li}")
 
 candidate_OTooley = candidate.count("O'Tooley")
-print(f'OTooley: '+ str(candidate_OTooley))
+percent_OTooley = candidate.count("O'Tooley") / len(voter_id) * 100
+print(f"OTooley: {percent_OTooley} {candidate_OTooley}")
     
 
 
