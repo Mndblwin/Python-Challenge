@@ -66,10 +66,10 @@ with open(outfile, 'w') as textfile:
                 f"Total Votes: {len(voter_id)}\n"
                 f"--------------------------------\n")
 
-    textfile.write(f"Khan: {round_Khan} {candidate_Khan}\n"
-                f"Correy: {round_Correy} {candidate_Correy}\n"
-                f"Li: {round_Li} {candidate_Li}\n"
-                f"OTooley: {round_OTooley} {candidate_OTooley}\n"
+    textfile.write(f"Khan: {round_Khan}% {candidate_Khan}\n"
+                f"Correy: {round_Correy}% {candidate_Correy}\n"
+                f"Li: {round_Li}% {candidate_Li}\n"
+                f"OTooley: {round_OTooley}% {candidate_OTooley}\n"
                 f"--------------------------------\n")
     textfile.write(f'Winner:' + str(winner(candidate)))
                 

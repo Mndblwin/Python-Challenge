@@ -7,8 +7,8 @@ import statistics
 
 
 #Files to load and output
-file_to_load = os.path.join("Resources","Budget_data.csv")
-file_to_output = os.path.join("Analysis","financial_analysis.txt")
+file_to_load = os.path.join("PyBank","Resources","Budget_data.csv")
+file_to_output = os.path.join("PyBank","Analysis","financial_analysis.txt")
 
 #Dictionary of Date and Profit/Loss
 date_profit_loss = {'Jan-2010': 867884,
@@ -122,15 +122,15 @@ greatest_increase_in_profits = max(date_profit_loss.values())
 print(f'Greatest_increase_in_profits:${greatest_increase_in_profits}')
 
 
-file_to_output = os.path.join("Analysis","financial_analysis.txt")
-with open(file_to_output, "w") as outfile:
+#Create Output File
+with open(file_to_output, "w") as textfile:
 
-    outfile.write("Financial Analysis\n")
-    outfile.write("----------------------------\n")
-    outfile.write(f"Total Months:  {total_months}\n")
-    outfile.write(f"Total:  ${total}\n")
-    outfile.write(f"Average Change:  ${average_change}\n")
-    outfile.write(f"Greatest Increase in Profits: (${greatest_increase_in_profits})\n")
-    outfile.write(f"Greatest Decrease in Losses:  (${greatest_decrease_in_profits})\n")
+    textfile.write("Financial Analysis\n")
+    textfile.write("----------------------------\n")
+    textfile.write(f"Total Months:  {total_months}\n")
+    textfile.write(f"Total:  ${total}\n")
+    textfile.write(f"Average Change:  ${average_change}\n")
+    textfile.write(f"Greatest Increase in Profits: ${greatest_increase_in_profits}\n")
+    textfile.write(f"Greatest Decrease in Losses:  ${greatest_decrease_in_profits}\n")
 
    
