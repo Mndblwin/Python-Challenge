@@ -6,7 +6,7 @@ import csv
 import statistics
 
  # Set path for file
-csvpath = os.path.join("election.csv")
+csvpath = os.path.join("PyPoll", "election_data.csv")
 
 # Open the CSV
 csvfile =  open(csvpath)
